@@ -1,0 +1,29 @@
+<%- include('partials/head.ejs') %>
+    <title> <%=pageTitle %> </title>
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+    
+    <main class="container">
+        <table class="table">
+            <% if(users.length > 0){ %>
+                <thead>
+                    <tr>
+                        <th scope="col">Name</th>
+                    </tr>
+                </thead>
+                <% for (const user of users) { %>
+                    <tbody>
+                        <tr>
+                            <td><%=user%></td>
+                        </tr>
+                    </tbody> 
+                <% } %>
+            <% } 
+            else {%>
+                <h1>Empty</h1>
+            <% } %>
+
+        </table>
+    </main>
+    <%- include('partials/bottom.ejs') %>

@@ -1,0 +1,15 @@
+<%- include('partials/head.ejs') %>
+    <title> <%=pageTitle %> </title>
+</head>
+<body>
+    <%- include('partials/header.ejs') %>
+    
+    <main class="container">
+        <form class="form-control-sm" method="POST" action="/new-user">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Fill your name" required>
+            <br>
+            <button class="btn btn-success" type="submit">Add</button>
+        </form>
+    </main>
+    <%- include('partials/bottom.ejs') %>
